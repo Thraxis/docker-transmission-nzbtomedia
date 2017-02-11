@@ -7,7 +7,7 @@
 
 Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more. [Transmission](http://www.transmissionbt.com/about/)
 
-[![transmission](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/transmission.png)][transurl]
+[![transmission](https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/transmission.png)][transurl]
 [transurl]: https://www.transmissionbt.com/
 
 [nzbToMedia][nzbtomediaurl] provides NZB and Torrent postprocessing To CouchPotatoServer, SickBeard/SickRage, HeadPhones, Mylar and Gamez
@@ -23,18 +23,18 @@ docker create --name=transmission \
 -e TZ=<timezone> \
 -p 9091:9091 -p 51413:51413 \
 -p 51413:51413/udp \
-linuxserver/transmission
+thraxis/transmission-nzbtomedia
 ```
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side.
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
 http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
 
 
-* `-p 9091` 
+* `-p 9091`
 * `-p 51413` - the port(s)
 * `-v /config` - where transmission should store config files and logs
 * `-v /downloads` - local path for downloads
@@ -56,7 +56,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
     uid=1001(dockeruser) gid=1001(dockergroup) groups=1001(dockergroup)
 ```
 
-## Setting up the application 
+## Setting up the application
 
 Webui is on port 9091, the settings.json file in /config has extra settings not available in the webui. Stop the container before editing it or any changes won't be saved.
 
@@ -84,16 +84,17 @@ The automatic update will run once a day at 3am local server time.
 
 ## Info
 
-* To monitor the logs of the container in realtime `docker logs -f transmission`.
+* To monitor the logs of the container in realtime `docker logs -f transmission-nzbtomedia`.
 
-* container version number 
+* container version number
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' transmission`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' transmission-nzbtomedia`
 
 * image version number
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/transmission`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' thraxis/transmission-nzbtomedia`
 
 
 ## Versions
++ **10-02-17:** Change to Alpine 3.5
 + **21.01.17:** Initial Release.
