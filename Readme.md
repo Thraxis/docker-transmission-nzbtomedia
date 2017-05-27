@@ -96,5 +96,6 @@ The automatic update will run once a day at 3am local server time.
 
 
 ## Versions
++ **26-05-17:** Rebased Alpine 3.6
 + **10-02-17:** Change to Alpine 3.5
 + **21.01.17:** Initial Release.
