@@ -1,17 +1,14 @@
 [![Thraxis|Docker](https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/thraxis-docker-medium.png)][templateurl]
-[templateurl]: https://github.com/Thraxis/docker-templates
 
 # thraxis/transmission-nzbtomedia
 [![](https://images.microbadger.com/badges/version/thraxis/transmission-nzbtomedia.svg)](https://microbadger.com/images/thraxis/transmission-nzbtomedia "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/thraxis/transmission-nzbtomedia.svg)](https://microbadger.com/images/thraxis/transmission-nzbtomedia "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/thraxis/transmission-nzbtomedia.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/thraxis/transmission-nzbtomedia.svg)][hub]
-[hub]: https://hub.docker.com/r/thraxis/transmission-nzbtomedia/
 
 Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more. [Transmission](http://www.transmissionbt.com/about/)
 
 [![transmission](https://raw.githubusercontent.com/thraxis/docker-templates/master/thraxis/img/transmission.png)][transurl]
-[transurl]: https://www.transmissionbt.com/
 
 [nzbToMedia][nzbtomediaurl] provides NZB and Torrent postprocessing To CouchPotatoServer, SickBeard/SickRage, HeadPhones, Mylar and Gamez
-[nzbtomediaurl]: https://github.com/clinton-hall/nzbToMedia
+
 ## Usage
 
 ```
@@ -99,3 +96,8 @@ The automatic update will run once a day at 3am local server time.
 + **26-05-17:** Rebased Alpine 3.6
 + **10-02-17:** Change to Alpine 3.5
 + **21.01.17:** Initial Release.
+
+[templateurl]: https://github.com/Thraxis/docker-templates
+[hub]: https://hub.docker.com/r/thraxis/transmission-nzbtomedia/
+[transurl]: https://www.transmissionbt.com/
+[nzbtomediaurl]: https://github.com/clinton-hall/nzbToMedia
